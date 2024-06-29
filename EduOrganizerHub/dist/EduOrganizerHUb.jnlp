@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="EduOrganizerHUb.jnlp">
+  <information>
+    <title>EduOrganizerHUb</title>
+    <vendor>alex_</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="EduOrganizerHUb.jar" size="392019" download="eager" />
+    <jar href="lib\JasperViewerFX.jar" size="7917003" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.3.jar" size="246174" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\fontawesomefx-8.2.jar" size="180341" download="eager" />
+    <jar href="lib\jasperreports-6.7.0.jar" size="5528257" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.7.0.jar" size="2478074" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.7.0.jar" size="5537261" download="eager" />
+    <jar href="lib\jcommon-1.0.8.jar" size="310890" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1570157" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.48.jar" size="1006956" download="eager" />
+    <jar href="lib\ojdbc14-10.2.0.2.0.jar" size="1545954" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="EduOrganizerHUb" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="main.EduOrganizerHub"  name="EduOrganizerHUb" />
+  <update check="always"/>
+</jnlp>
