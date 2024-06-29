@@ -11,3 +11,5 @@ Algunas cosas a destacar:
 -Implementa 3 perfiles diferentes de usuario (administrador, profesor, alumno) con distintos roles y funcionalidades dentro de la aplicación.
 -Dispone de gráficas y estadísticas actualizadas con los datos a tiempo real
 
+![image](https://github.com/AlejandroSMed/EduOrganizer-Hub/assets/132131073/0f7a037f-b745-43c0-8dae-d454e356c199)
+
