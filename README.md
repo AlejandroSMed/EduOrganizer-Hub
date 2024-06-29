@@ -3,7 +3,7 @@
 EduOrganizer Hub es una aplicación de escritorio para la gestión de un centro educativo.
 Implementa un sistema de roles y usuarios que permitirá la administración, tanto general como individualizada, de todas las acciones y procesos necesarios para la correcta gestión de un centro escolar: operaciones con alumnos, profesores, asignaturas, salarios, ingresos, publicación de notas y revisión de estadísticas.
 
-Aspectos relevantes del proyecto
+
 Se ha empleado el IDE Netbeans 8.2, con Java como lenguaje de programación y Java FX para la creación de las interfaces de usuarios, además de una base de datos MySQL.
 
 Algunas cosas a destacar:
