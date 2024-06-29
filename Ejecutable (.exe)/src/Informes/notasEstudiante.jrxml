@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9142ccf1-b5a6-4118-945b-3cefe66c333a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT teacher_student.`stud_studentID` AS teacher_student_stud_studentID, teacher_student.`stud_name` AS teacher_student_stud_name, teacher_student.`stud_course` AS teacher_student_stud_course, teacher_student.`stud_semester` AS teacher_student_stud_semester, teacher_student.`primer_trim` AS teacher_student_primer_trim, teacher_student.`segundo_trim` AS teacher_student_segundo_trim, teacher_student.`nota_final` AS teacher_student_nota_final FROM teacher_student]]>
+	</queryString>
+	<field name="teacher_student_stud_studentID" class="java.lang.String"/>
+	<field name="teacher_student_stud_name" class="java.lang.String"/>
+	<field name="teacher_student_stud_course" class="java.lang.String"/>
+	<field name="teacher_student_stud_semester" class="java.lang.String"/>
+	<field name="teacher_student_primer_trim" class="java.lang.Double"/>
+	<field name="teacher_student_segundo_trim" class="java.lang.Double"/>
+	<field name="teacher_student_nota_final" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="130" y="0" width="382" height="62" uuid="c78b6781-f8eb-429b-903d-9b0903dec483"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Boletín de Notas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="219" y="62" width="196" height="22" uuid="2bb652aa-d39e-4328-834f-14e8ef67bb02"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[EduOrganizer Hub]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="94" width="383" height="42" uuid="ca475c03-9d86-4de5-a1f1-25f0b5e47679"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Notas del estudiante, curso 2023/24]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="f89ba2e6-2407-4ee3-8177-85c5bd675b3d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="79" height="15" forecolor="#736343" uuid="d7b64be5-4330-4d5a-8463-ee663ece3d55"/>
+				<text><![CDATA[ID Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="79" y="0" width="79" height="15" forecolor="#736343" uuid="99ae0251-a538-4ded-92f5-5df368ff183a"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="158" y="0" width="79" height="15" forecolor="#736343" uuid="dd87a2ec-65e8-40b5-881f-2d8f74507346"/>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="237" y="0" width="79" height="15" forecolor="#736343" uuid="33bbfd3b-8287-47d5-a200-fcd53487d8d0"/>
+				<text><![CDATA[Semestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="316" y="0" width="79" height="15" forecolor="#736343" uuid="2954e8a8-0ce2-4918-978c-1dbcf5d9062f"/>
+				<text><![CDATA[1er Trimestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="395" y="0" width="79" height="15" forecolor="#736343" uuid="ea8f4a01-6da1-4d0f-aca1-cabf310053c5"/>
+				<text><![CDATA[2º Trimestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="0" width="79" height="15" forecolor="#736343" uuid="e5be58f7-96c8-4359-94cd-9352c0cb5925"/>
+				<text><![CDATA[NOTA FINAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="ed9382a5-a72a-4d3c-aca6-ff74efae7efd"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="26d8dff0-4581-4ad3-b91c-46f123f76f27"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_stud_studentID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="79" y="0" width="79" height="15" uuid="f0a83a44-4903-492b-9122-a25ac9bfa3c8"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_stud_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="158" y="0" width="79" height="15" uuid="5ab15cc7-aeee-45c0-adaa-2b2324285951"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_stud_course}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="237" y="0" width="79" height="15" uuid="c08ce696-6fbb-4e87-ac9f-74fe389555d9"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_stud_semester}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="316" y="0" width="79" height="15" uuid="53f441e1-1a8f-485c-ba58-73a55c1a094f"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_primer_trim}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="395" y="0" width="79" height="15" uuid="2f2e5989-44ad-4b8e-8900-478b3ee789e1"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_segundo_trim}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="474" y="0" width="79" height="15" uuid="915ab296-9813-4fb9-bd45-dc2601284df5"/>
+					<textFieldExpression><![CDATA[$F{teacher_student_nota_final}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="8bf6c07f-3eac-4f58-b308-c59e6b28bf34"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="b6da4b8b-90f7-494d-861c-f28b162eb834"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="408e0918-caba-4fe4-8aa2-f18dab38620f"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="b27c183c-a7e5-46ca-b5a1-1961d86ddfc6"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="5318232a-25ba-468a-b96e-7430b9b3dd28"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

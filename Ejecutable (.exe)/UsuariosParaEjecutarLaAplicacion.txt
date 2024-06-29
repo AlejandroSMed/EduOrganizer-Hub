@@ -1,0 +1,15 @@
+/////
+@author Alejandro Sanz Mediavilla
+////////////
+
+Usuario administrador:
+user: admin1	
+password: 12345678
+
+Usuario profesor:
+user: jesusgil1
+password: 12345678
+
+Usuario alumno:
+user: rodrigosuarez
+password: 12345678
