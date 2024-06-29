@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Estudiante.AltaEstudianteController">
+   <children>
+      <AnchorPane fx:id="main_form" layoutX="133.0" layoutY="80.0" prefHeight="450.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="417.0" prefWidth="624.0" stylesheets="@../Estilos/MainForm.css">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <FontAwesomeIcon glyphName="USER" layoutX="416.0" layoutY="367.0" opacity="0.16" size="20em" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Información Estudiante">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="29.0" layoutY="68.0" text="Número Estudiante:" />
+                  <TextField fx:id="student_number" layoutX="163.0" layoutY="62.0" prefHeight="25.0" prefWidth="109.0" stylesheets="@../Estilos/MainForm.css" />
+                  <Label layoutX="92.0" layoutY="109.0" text="Nombre:" />
+                  <TextField fx:id="student_name" layoutX="162.0" layoutY="104.0" />
+                  <DatePicker fx:id="student_birthDate" layoutX="163.0" layoutY="145.0" onAction="#countAge" prefHeight="25.0" prefWidth="149.0" />
+                  <Label layoutX="122.0" layoutY="188.0" text="Año:" />
+                  <ComboBox fx:id="student_year" layoutX="162.0" layoutY="183.0" prefWidth="150.0" promptText="Seleccionar..." />
+                  <Label layoutX="117.0" layoutY="225.0" text="Curso:" />
+                  <ComboBox fx:id="student_course" layoutX="163.0" layoutY="220.0" onAction="#courseList" prefWidth="150.0" promptText="Seleccionar..." />
+                  <Label layoutX="106.0" layoutY="260.0" text="Sección:" />
+                  <Label layoutX="295.0" layoutY="67.0" text="Género:" />
+                  <ComboBox fx:id="student_gender" layoutX="353.0" layoutY="62.0" prefWidth="150.0" promptText="Seleccionar..." />
+                  <ComboBox fx:id="student_section" layoutX="163.0" layoutY="255.0" prefWidth="150.0" promptText="Seleccionar..." />
+                  <Label layoutX="387.0" layoutY="226.0" text="Pago:" />
+                  <TextField fx:id="student_pay" layoutX="428.0" layoutY="221.0" prefHeight="31.0" prefWidth="149.0" promptText="0.0€" />
+                  <Label layoutX="336.0" layoutY="261.0" text="Estatus Pago:" />
+                  <ComboBox fx:id="student_payment" layoutX="427.0" layoutY="256.0" prefWidth="150.0" promptText="Seleccionar..." />
+                  <Label layoutX="371.0" layoutY="300.0" text="Estatus:" />
+                  <ComboBox fx:id="student_status" layoutX="427.0" layoutY="295.0" prefWidth="150.0" promptText="Seleccionar..." />
+                  <AnchorPane layoutX="510.0" layoutY="25.0" prefHeight="113.0" prefWidth="100.0" stylesheets="@../Estilos/MainForm.css">
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <children>
+                        <ImageView fx:id="student_imageView" fitHeight="113.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="student_importBtn" layoutX="510.0" layoutY="135.0" mnemonicParsing="false" onAction="#importBtn" prefHeight="25.0" prefWidth="100.0" styleClass="btn" stylesheets="@../Estilos/MainForm.css" text="Subir" />
+                  <Button fx:id="student_addBtn" layoutX="187.0" layoutY="366.0" mnemonicParsing="false" onAction="#addBtn" prefHeight="37.0" prefWidth="100.0" styleClass="btn" stylesheets="@../Estilos/MainForm.css" text="Añadir" />
+                  <Button fx:id="student_updateBtn" layoutX="321.0" layoutY="366.0" mnemonicParsing="false" onAction="#updateBtn" prefHeight="37.0" prefWidth="100.0" styleClass="btn" stylesheets="@../Estilos/MainForm.css" text="Editar" />
+                  <Label layoutX="14.0" layoutY="150.0" text="Fecha de nacimiento:" />
+                  <Label layoutX="356.0" layoutY="188.0" text="Semestre:" />
+                  <ComboBox fx:id="student_semester" layoutX="427.0" layoutY="184.0" prefWidth="150.0" promptText="Seleccionar..." />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
