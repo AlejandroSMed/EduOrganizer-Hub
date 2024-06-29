@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f487b8f-dc2c-473b-9b9d-b09fcb8f74dc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     teacher.`id` AS teacher_id,
+     teacher.`teacher_id` AS teacher_teacher_id,
+     teacher.`full_name` AS teacher_full_name,
+     teacher.`gender` AS teacher_gender,
+     teacher.`year_experience` AS teacher_year_experience,
+     teacher.`experience` AS teacher_experience,
+     teacher.`department` AS teacher_department,
+     teacher.`salary` AS teacher_salary,
+     teacher.`salary_status` AS teacher_salary_status,
+     teacher.`image` AS teacher_image,
+     teacher.`date_insert` AS teacher_date_insert,
+     teacher.`date_update` AS teacher_date_update,
+     teacher.`date_delete` AS teacher_date_delete,
+     teacher.`status` AS teacher_status,
+     salary.`id` AS salary_id,
+     salary.`teacher_id` AS salary_teacher_id,
+     salary.`name` AS salary_name,
+     salary.`salary_per_day` AS salary_salary_per_day,
+     salary.`total_days` AS salary_total_days,
+     salary.`salary_paid` AS salary_salary_paid,
+     salary.`date_paid` AS salary_date_paid
+FROM
+     `teacher` teacher,
+     `salary` salary]]>
+	</queryString>
+	<field name="teacher_full_name" class="java.lang.String"/>
+	<field name="teacher_department" class="java.lang.String"/>
+	<field name="teacher_gender" class="java.lang.String"/>
+	<field name="salary_total_days" class="java.lang.Integer"/>
+	<field name="salary_salary_paid" class="java.lang.Double"/>
+	<field name="teacher_date_update" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="68" y="0" width="474" height="62" uuid="8309b4b0-840b-4c1d-840b-dc302abb76c9"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Nóminas Profesorado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="168" y="62" width="292" height="22" uuid="39c32bcb-ff4a-4fd7-ab17-4385c835927e"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[EduOrganizer Hub - Histórico Nóminas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="94" width="383" height="42" uuid="e9fdd796-ad8f-4ccb-b559-99e2a6430d1b"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Listado de nóminas pagadas al profesorado de EduOrganizer Hub]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="28e1d006-5efe-4bd6-90a6-c7f7a944f8ed"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="92" height="15" forecolor="#736343" uuid="7ae8e914-c050-47e0-8181-96fa673c9968"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="92" y="0" width="92" height="15" forecolor="#736343" uuid="c7bf059f-8cad-482f-96c6-c8be033c2514"/>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="184" y="0" width="92" height="15" forecolor="#736343" uuid="921e81d3-2219-47a6-ac1b-cdd8f5ba5fd3"/>
+				<text><![CDATA[Género]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="276" y="0" width="92" height="15" forecolor="#736343" uuid="ecb5ab9c-fc1b-40f0-bad9-450886e2609d"/>
+				<text><![CDATA[Días cotizados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="368" y="0" width="92" height="15" forecolor="#736343" uuid="2c101adc-252c-447f-b437-8106c75b8234"/>
+				<text><![CDATA[Nómina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="460" y="0" width="92" height="15" forecolor="#736343" uuid="160b328e-3e8b-4884-a3f7-d269d0b3805a"/>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="15" uuid="a8f56c32-32a8-4e3e-82c2-fdbd6bec04f3"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="92" height="15" uuid="5865f03b-ec83-4a95-b9ce-8c3487e2af7c"/>
+					<textFieldExpression><![CDATA[$F{teacher_full_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="92" y="0" width="92" height="15" uuid="cfa3e302-6946-474b-b3e1-1d5335e4000b"/>
+					<textFieldExpression><![CDATA[$F{teacher_department}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="184" y="0" width="92" height="15" uuid="f38eda87-662d-408e-9605-6bcacf016f6b"/>
+					<textFieldExpression><![CDATA[$F{teacher_gender}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="276" y="0" width="92" height="15" uuid="23280467-73db-467d-bb7e-425fd313faf6"/>
+					<textFieldExpression><![CDATA[$F{salary_total_days}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="368" y="0" width="92" height="15" uuid="6d9e87b0-e28d-48d5-880c-10bcb639ebe1"/>
+					<textFieldExpression><![CDATA[$F{salary_salary_paid}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="460" y="0" width="92" height="15" uuid="f64d0e68-030b-4d11-a516-6a3f103b9779"/>
+					<textFieldExpression><![CDATA[$F{teacher_date_update}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="2ad6b86c-d9bf-40a2-820d-2de8cda00ebb"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="597" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="d85fcaa0-6649-4df4-a9ab-442f25a9738d"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="533" y="0" width="40" height="20" forecolor="#736343" uuid="7b9632c1-27ee-4b4e-a0ea-ed9237294adc"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="453" y="0" width="80" height="20" forecolor="#736343" uuid="5a6704ef-e625-447e-8c47-2d2923040d4c"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="b2244652-7e37-4588-aa50-3698dceebc93"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
