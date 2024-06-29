@@ -12,4 +12,6 @@ Algunas cosas a destacar:
 -Dispone de gráficas y estadísticas actualizadas con los datos a tiempo real
 
 ![image](https://github.com/AlejandroSMed/EduOrganizer-Hub/assets/132131073/0f7a037f-b745-43c0-8dae-d454e356c199)
+![image](https://github.com/AlejandroSMed/EduOrganizer-Hub/assets/132131073/609b5bde-8c91-44d9-8f5b-ec6e7cee0d67)
+
 
